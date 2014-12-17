@@ -1,0 +1,32 @@
+<div data-role="header" data-position="fixed" data-theme="b">
+    <h1 id="title"><%= type %></h1>
+    <a href="#home" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+</div>
+
+<div data-role="content">
+<form action="" method="post" id="quizForm">
+   <ol id="questionsList" data-role="listview">
+      <% _.each( questions, function( question ) { %>
+         <li>
+            <fieldset data-role="controlgroup">
+              <legend><%-question.text %></legend>
+              <br/>
+              <div class="ui-controlgroup-controls">
+                 <% _.each(question.answers,function(answer){ %>
+                  <label >
+                     <input type="radio" name="RId<%=question.id%>" value="<%=answer.id%>"><%-answer.text%>
+                  </label>
+                 <% }); %>
+              </div>
+            </fieldset>
+          </li>
+            <% }); %>
+       </ol>
+   <input type="submit" value="Submit Quiz" data-theme="b" id="submitButton" data-position="fixed">
+ </form>
+ </div>
+  <div data-role="footer" data-position="fixed" data-theme="b">
+
+  <h4>&copy; Incrys Internship</h4>
+
+  </div>

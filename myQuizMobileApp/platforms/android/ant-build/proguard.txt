@@ -1,0 +1,3 @@
+# view AndroidManifest.xml #generated:6
+-keep class ro.incrys.mobilequiz.CordovaApp { <init>(...); }
+

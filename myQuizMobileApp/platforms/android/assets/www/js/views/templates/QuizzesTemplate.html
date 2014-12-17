@@ -1,0 +1,27 @@
+<div data-role="header" data-position="fixed" data-theme="b">
+	<h1 id="title"><%= type %></h1>
+	<a href="#h" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+</div>
+
+<div data-role="content">
+
+<% if(typeof(data)!="undefined" ){ %>
+
+   <h2>Cick a test to start</h2>
+   <ul data-role="listview" data-inset="true">
+       	<% _.each( (typeof data.length=="number")?data:[data], function( test ) { %>
+          <li ><a href="#test?<%= test.quiz.id %>" data-test="<%= test.id %>"><%= test.quiz.name %></a> </li>
+   		<% }); %>
+       </ul>
+
+<% }else{ %>
+
+   <h2> There are not tests to take </h2>
+
+<% } %>
+ </div>
+  <div data-role="footer" data-position="fixed" data-theme="b">
+
+  <h4>&copy; Incrys Internship</h4>
+
+  </div>
