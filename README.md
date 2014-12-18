@@ -3,7 +3,7 @@ mobileQuiz
 
 myQuizMobileApp:
 
-- mobile application developed in cordova for android platform 
+- hybrid mobile application developed in cordova for android platform 
 - Functionality: 
    - logs a candidate
    - allow a candidate to take assigned quizzes and displays the score
